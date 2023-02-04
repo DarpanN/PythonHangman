@@ -1,7 +1,9 @@
 import random
+import time
 
 def hangman(word):
     wrong = 0
+
     stages = ["",
              "________        ",
              "|               ",
@@ -18,6 +20,14 @@ def hangman(word):
     print("Guess The Programming Language..!!!")
     name = input("Enter Your Name: ")
     print("Welcome To Hangman Guessing Game", name + " Good Luck !!!")
+    time.sleep(2)
+    print("The game is about to start!\n Let's play Hangman!")
+    time.sleep(3)
+
+
+
+
+
     while wrong < len(stages) - 1:
         print("\n")
         msg = "Guess a letter: "
@@ -32,7 +42,7 @@ def hangman(word):
         e = wrong + 1
         print("\n".join(stages[0: e]))
         if "_" not in board:
-            print("​Congratulations " +"!!!" , name + "You Win")
+            print("​Congratulations " +"!!!" , name + " You Win")
             print(" ".join(board))
             win = True
             break
